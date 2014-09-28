@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="fields">
+		<field type="sql" label="Audio File" name="audio_id" description="Select the file to include" filter="safehtml" required="true" query="SELECT a.id, a.title FROM #__wbty_audio_manager_audio_files as a WHERE a.state=1 ORDER BY a.created_time DESC" key_field="id" value_field="title" onchange="document.getElementById('audio_title').value = this.options[this.selectedIndex].text;" />
+		<field type="hidden" name="audio_title" />
+	</fieldset>
+</form>

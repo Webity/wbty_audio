@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+    	<name>wbty_audio_manager</name>
+    <creationDate>2013-03-09</creationDate>
+    <copyright>Copyright (C) 2013. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Webity</author>
+    <authorEmail>david@makethewebwork.com</authorEmail>
+    <authorUrl>http://www.makethewebwork.com</authorUrl>
+    <version>1.0.0</version>
+    <description>A system for WBTY to upload and display audio files  with articles</description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+		<file>controller.php</file>
+		<file>index.html</file>
+		<file>wbty_audio_manager.php</file>
+		<file>router.php</file>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+    </files>
+	<media folder="media" destination="wbty_audio_manager">
+		<folder>blue.monday</folder>
+        <folder>css</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+        <file>jplayer.playlist.min.js</file>
+        <file>Jplayer.swf</file>
+        <file>jquery.jplayer.min.js</file>
+	</media>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB.com_wbty_audio_manager.ini
+        </language>
+    </languages>
+    <administration>
+        <!-- Need to add image still <menu img="media/wbty_audio_manager/img/s_com_wbty_audio_manager.png" >com_wbty_audio_manager</menu>-->
+		<menu>com_wbty_audio_manager</menu>
+        <submenu>
+			{menu_items}
+        </submenu>
+        <files folder="administrator">
+		<file>access.xml</file>
+		<file>config.xml</file>
+		<file>controller.php</file>
+		<file>index.html</file>
+		<file>wbty_audio_manager.php</file>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>sql</folder>
+		<folder>tables</folder>
+		<folder>views</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="en-GB">language/en-GB.com_wbty_audio_manager.ini
+            </language>
+            <language tag="en-GB">language/en-GB.com_wbty_audio_manager.sys.ini
+            </language>
+        </languages>
+    </administration>
+	
+	<scriptfile>script.wbty_audio_manager.php</scriptfile>
+</extension>

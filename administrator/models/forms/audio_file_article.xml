@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="fields">
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       
+					<field type="text" label="COM_WBTY_AUDIO_MANAGER_FORM_LBL_AUDIO_FILE_ARTICLES_ARTICLE" name="article" filter="safehtml" class="default_col" />
+		<field name="audio_file_id" type="hidden" filter="integer" />
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field> 
+
+                <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+				
+				<field name="created_by" type="hidden" filter="integer" />
+				<field name="created_time" type="hidden" filter="safehtml" />
+				
+				<field name="modified_by" type="hidden" filter="integer" overwrite="true" />
+				<field name="modified_time" type="hidden" filter="safehtml" overwrite="true" />
+
+	</fieldset>
+
+</form>

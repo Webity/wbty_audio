@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>plg_content_wbty_audio</name>
+	<author>Webity</author>
+	<creationDate>December 2012</creationDate>
+	<copyright>Copyright (C) 2012 Webity. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>david@makethewebwork.com</authorEmail>
+	<authorUrl>www.makethewebwork.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_WBTY_AUDIO_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="wbty_audio">wbty_audio.php</filename>
+		<filename plugin="wbty_audio">wbty_editor.xml</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_wbty_audio.ini</language>
+		<language tag="en-GB">en-GB.plg_content_wbty_audio.sys.ini</language>
+	</languages>
+	<media folder="media" destination="plg_content_wbty_audio">
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
